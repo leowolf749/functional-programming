@@ -48,8 +48,8 @@ function divisors(num) {
     function isDivisible(current) {
         return num % current === 0;
     }
-let array = range(1, num).filter(isDivisible);
-    return array;
+let nums = range(1, num).filter(isDivisible);
+    return nums;
 
 }
 
@@ -109,3 +109,11 @@ function multiples(one, two) {
 }
 
 console.log(multiples(6, 7));
+
+
+console.log('Part 2: reinventing map and filter');
+
+function map(array, func) {
+    let array = [];
+    
+}
