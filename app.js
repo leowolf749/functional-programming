@@ -30,10 +30,30 @@ console.log(containsVowel('Kick'));
 
 // 2. divisors
 console.log('02 | divisors');
+/**
+ * Write a function called divisors that accepts a number and returns an array of all
+ * of the numbers that divide evenly into it.
+ */
+function range(min, max) {
+let arr = [];
+  
+    for (let i = min; i <= max; i++) {
+        arr.push(i);
+    }
+  
+    return arr;
+    }
 
 function divisors(num) {
+    function isDivisible(current) {
+        return num % current === 0;
+    }
+let array = range(1, num).filter(isDivisible);
+    return array;
 
 }
+
+console.log(divisors(75));
 
 // 3. boost
 console.log('03 | boost');
