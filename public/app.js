@@ -113,7 +113,47 @@ console.log(multiples(6, 7));
 
 console.log('Part 2: reinventing map and filter');
 
-function map(array, func) {
-    let array = [];
-    
+console.log('MAP');
+
+function timesTwo(num) {
+    num = num * 2;
+
+    return num;
 }
+// console.log(timesTwo(2));
+
+function map(array, func) {
+    let results = []
+    for (let i = 0; i < array.length; i++) {
+        results.push(func(array[i]));
+    }
+    return results;
+}
+console.log(map([10, 25, 31], timesTwo));
+
+
+console.log('FILTER');
+
+function lessThanTen(num) {
+    if (num < 10) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+
+function filter(array, keep) {
+    let remain = [];
+
+    for (let i = 0; i < array.length; i++) {
+        if (keep(array[i]) === true) {
+            remain.push(array[i]);
+        }
+    }
+    return remain;
+}
+
+console.log(filter([3, 8, 10], lessThanTen));
+
+

@@ -1,0 +1,18 @@
+/* Include Foundation */
+
+@import '../node_modules/foundation-sites/scss/foundation';
+
+@include foundation-global-styles;
+@include foundation-grid;
+
+
+body {
+    background-color: cornflowerblue;
+
+    h1 {
+        color: navajowhite;
+        font-family: Quicksand;
+        font-size: 10em;
+        margin: 10px;
+    }
+}
